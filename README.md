@@ -3,6 +3,7 @@ This report is part of a cybercrime analysis project.
 The samples can be downloaded here:
 - https://drive.google.com/file/d/1hfG8_nPxQoXszb36uLhYYkTcPTUfa3IK/view?usp=sharing
 
+&ensp;
 ## Project Context
 The incident response team has informed us that an executable file has been found in an ongoing investigation with the following SHA256 hash:
 
@@ -10,6 +11,7 @@ SHA256: __5ffecf27b187bcaec80b45b570631e5bd53672b23dedb4d28d4e3dc6e81214b1__
 
 They have asked for our help in detecting similar binaries, and have requested actionable __IOC__ and __Yara rules__ for this purpose.
 
+&ensp;
 ## Analysis
 ### __Relevent elements :__
 
@@ -50,8 +52,10 @@ The following are the six most relevant elements found during the OSINT and malw
 - The file has no signature.
 - Contains section with suspicous name (".masarad") and very low virtual size (5 bytes).
 
-
+&ensp;
 ### __Interesting and Uncommon Properties :__
+
+
 The following are the interesting and uncommon properties of the sample:
 - Excutes Windows Management Instrument ation
 - Defense evasion : Virtualization/Sandbox Evasion
@@ -62,6 +66,7 @@ The following are the interesting and uncommon properties of the sample:
     ![Entropy Graph](./Entropy.png "Entropy Graph")
     We notice that the entropy is very high in the data section but also very high in the __.masarad__ section that contains only 0s in hex editor.
 
+&ensp;
 ### __Yara rules :__
 
 We've written 4 yara rules to match this sample. 
@@ -85,7 +90,9 @@ The matches for __match2.yara__ and __match3.yara__ in the given sample database
 
 We've added a last rule __redline.yara__ to match the unpacked sample using relevent behavioral strings used by the Redline Stealer family.
 
-## Parser
+&ensp;
+
+## Parser :
 In order to accelerate future responses to such kinds of attacks we've written a python script to check a few properties if the file is a PE:
 
 - Check if this PE is a DLL
