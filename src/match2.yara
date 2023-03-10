@@ -1,6 +1,6 @@
 import "pe"
 import "math"
-rule match1{
+rule match2{
     meta:
         author = "Joe Khawand"
         description = "Rule to match samples similar to : 5ffecf27b187bcaec80b45b570631e5bd53672b23dedb4d28d4e3dc6e81214b1"

@@ -1,6 +1,6 @@
 import "pe"
 
-rule rich_header {
+rule match3{
     meta:
         author = "Joe Khawand"
         description = "Matches the Rich header of 5ffecf27b187bcaec80b45b570631e5bd53672b23dedb4d28d4e3dc6e81214b1 and other similar samples"
