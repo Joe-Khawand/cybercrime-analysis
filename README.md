@@ -103,7 +103,7 @@ In order to accelerate future responses to such kinds of attacks we've written a
   
 The python script has been provided alongside this report.
 
-The output of the analysis on the file:
+The analysis on the file gives us :
 ```bash
 remnux@b0c72fcdd969:~/Project/src$ python3 parser.py ../malware/5ffecf27b187bcaec80b45b570631e5bd53672b23dedb4d28d4e3dc6e81214b1
 Pe file analysis
